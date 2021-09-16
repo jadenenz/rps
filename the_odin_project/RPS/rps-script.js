@@ -29,3 +29,40 @@ function computerPlay() {  //makes the computer's choice of RPS
     }
     return computerSelection;
 }
+
+/* Function that plays one round of RPS.
+Takes two parameters playerSelection and computerSelection
+
+Compares the two selections
+
+If playerSelection and computerSelection are the same its a tie and
+user is prompted again.
+
+If pSel = rock and cSel = paper,  player loses
+if pSel = rock and cSel = scissors, player wins
+if pSel = scissors and cSel = rock, player loses
+if pSel = scissors and cSel = paper, player wins
+if pSel = paper and cSel = scissors, player loses
+if pSel = paper and cSel = rock, player wins */
+
+function playRound(playerSelection, computerSelection) {
+
+    if (playerSelection === computerSelection) {
+        console.log('Tie game. Try again');
+    } else if (playerSelection === 'Rock' && computerSelection === 'Paper') {
+        console.log('You lose! Paper beats Rock');
+    } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
+        console.log('You win! Rock beats Scissors');
+    } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
+        console.log('You lose! Rock beats Scissors');
+    } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
+        console.log('You win! Scissors beats Paper');
+    } else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
+        console.log('You lose! Scissors beats Paper');
+    } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
+        console.log('You win! Paper beats Rock');
+    } else {
+        console.log('Whats going on here');
+    }
+    return
+    }
