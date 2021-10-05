@@ -25,28 +25,13 @@
 
 <body>
   <!-- your content here... -->
-  <script src="rps-script.js"></script>
-  <script>
-      function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-  }
+  <script src="rps-script.js" defer></script>
+  
+  <button id="rockButton">Rock</button>
+  <button id="paperButton">Paper</button>
+  <button id="scissorsButton">Scissors</button>
 
-  function computerPlay() {
-   let choice = getRandomInt(1, 4);
-   console.log(choice);
-   let computerSelection;
-
-   If choice === 1 {
-    computerSelection = 'Rock';
-   } Else if choice === 2 {
-        computerSelection = 'Paper';
-   } Else {
-       computerSelection = 'Scissors';
-   }
-   console.log(choice);
-}
-  </script>
+  <div id="results"></div>
+  <div id="score"></div>
 </body>
 </html>
