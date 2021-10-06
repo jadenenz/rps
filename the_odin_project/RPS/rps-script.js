@@ -133,12 +133,41 @@ const scoreDiv = document.getElementById('score');
 rockButton.addEventListener('click', e => {
     playRound('rock', computerPlay());
     scoreDiv.textContent = 'Wins: ' + win + '\n Losses: ' + lose;
+    if (win >= 5) {
+        scoreDiv.textContent = 'Congratulations! You win!';
+        win = 0;
+        lose = 0;
+    } else if (lose >= 5) {
+        scoreDiv.textContent = 'Sorry! You lost!';
+        win = 0;
+        lose = 0;
+    }
 });
 paperButton.addEventListener('click', e => {
     playRound('paper', computerPlay());
-    scoreDiv.textContent = 'Wins: ' + win + '\r\n Losses: ' + lose;
+    scoreDiv.textContent = 'Wins: ' + win + '\n Losses: ' + lose;
+    if (win >= 5) {
+        scoreDiv.textContent = 'Congratulations! You win!';
+        win = 0;
+        lose = 0;
+    } else if (lose >= 5) {
+        scoreDiv.textContent = 'Sorry! You lost!';
+        win = 0;
+        lose = 0;
+    }
 });
 scissorsButton.addEventListener('click', e => {
     playRound('scissors', computerPlay());
-    scoreDiv.textContent = 'Wins: ' + win + '\r\n Losses: ' + lose;
+    scoreDiv.textContent = 'Wins: ' + win + '\n Losses: ' + lose;
+    if (win >= 5) {
+        scoreDiv.textContent = 'Congratulations! You win!';
+        win = 0;
+        lose = 0;
+    } else if (lose >= 5) {
+        scoreDiv.textContent = 'Sorry! You lost!';
+        win = 0;
+        lose = 0;
+    }
 });
+
+//make the function win or lose at 5 wins or losses
